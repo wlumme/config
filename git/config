@@ -1,0 +1,12 @@
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/etc/profiles/per-user/wlum/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/etc/profiles/per-user/wlum/bin/gh auth git-credential
+[user]
+	email = "80401792+wlumme@users.noreply.github.com"
+	name = "William Lumme"
+[init]
+	defaultbranch = main
