@@ -8,6 +8,7 @@
     discord
     gh
     git
+    modrinth-app
     neofetch
     neovim
     spotify
