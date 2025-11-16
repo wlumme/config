@@ -58,6 +58,7 @@
   # Configure console keymap
   console.keyMap = "uk";
 
+  # https://discourse.nixos.org/t/how-to-get-the-service-running-for-keyd/24991/3
   systemd.services.keyd = {
     description = "key remapping daemon";
     enable = true;
