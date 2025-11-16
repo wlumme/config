@@ -58,6 +58,18 @@
   # Configure console keymap
   console.keyMap = "uk";
 
+  systemd.services.keyd = {
+    description = "key remapping daemon";
+    enable = true;
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.keyd}/bin/keyd";
+    };
+    wantedBy = [ "sysinit.target" ];
+    requires = [ "local-fs.target" ];
+    after = [ "local-fs.target" ];
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
