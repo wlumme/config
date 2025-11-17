@@ -5,7 +5,7 @@ vim.g.have_nerd_font = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.g.lsps = { "lua-language-server", "python-lsp-server", "ruff", "ty" }
+-- vim.g.lsps = { "lua-language-server", "python-lsp-server", "ruff", "ty" }
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -36,7 +36,7 @@ end
 
 require("config.options")
 require("config.lazy")
-require("config.lsp")
+-- require("config.lsp")
 require("config.keymaps")
 
-require("nvim-treesitter.install").compilers = { "zig", "clang" }
+-- require("nvim-treesitter.install").compilers = { "zig", "clang" }
