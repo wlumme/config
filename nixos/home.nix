@@ -8,9 +8,9 @@
     discord
     gh
     git
-    modrinth-app
     neofetch
     neovim
+    prismlauncher
     spotify
     zoxide
   ];
