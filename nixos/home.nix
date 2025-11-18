@@ -12,6 +12,7 @@
     neovim
     prismlauncher
     protonup
+    python3
     spotify
     zoxide
   ];
