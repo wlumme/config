@@ -10,3 +10,5 @@
 	name = "William Lumme"
 [init]
 	defaultbranch = main
+[push]
+	autoSetupRemote = true
