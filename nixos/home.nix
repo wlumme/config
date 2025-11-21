@@ -14,6 +14,7 @@
     protonup
     python3
     spotify
+    uv
     zoxide
   ];
 
