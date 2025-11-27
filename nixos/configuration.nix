@@ -175,4 +175,12 @@
   # Refer to the following link for more details:
   # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
   nix.settings.auto-optimise-store = true;
+
+  # https://wiki.nixos.org/wiki/Swap
+  # https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-swapspace
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 8*1024; # 8 GB
+  }];
+
 }
