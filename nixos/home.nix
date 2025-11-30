@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     brave
     discord
+    gcc
     gh
     git
     neofetch
