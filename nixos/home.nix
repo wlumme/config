@@ -4,6 +4,7 @@
   home.username = "wlum";
   home.homeDirectory = "/home/wlum";
   home.packages = with pkgs; [
+    azure-cli
     brave
     discord
     gcc
