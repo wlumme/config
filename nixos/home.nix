@@ -16,6 +16,7 @@
     protonup
     python3
     spotify
+    terraform
     uv
     wl-clipboard
     zoxide
