@@ -93,6 +93,10 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # USB storage devices
+  # https://wiki.nixos.org/wiki/USB_storage_devices
+  services.udisks2.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.wlum = {
     isNormalUser = true;
