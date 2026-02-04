@@ -15,6 +15,7 @@
     prismlauncher
     protonup
     python3
+    rustup
     spotify
     terraform
     uv
