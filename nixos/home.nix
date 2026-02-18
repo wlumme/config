@@ -31,6 +31,10 @@
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/git/config";
   };
 
+  home.file.".config/nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/nvim";
+  };
+
   home.stateVersion = "25.05";
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOL_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
