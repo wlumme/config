@@ -1,0 +1,59 @@
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+eval "$(zoxide init bash --no-cmd)"
+
+alias cdi="__zoxide_zi"
+
+function activate() {
+    source .venv/Scripts/activate
+}
+
+function branch() {
+    git checkout main &&
+        git pull &&
+        git checkout -b $@
+}
+
+function cd() {
+    __zoxide_z "$1"
+    [[ -n $VIRTUAL_ENV ]] && deactivate
+    [[ -d "./.venv" ]] && activate
+}
+
+function clean() {
+    git checkout main &&
+        git branch | grep --invert-match main | xargs git branch -D
+}
+
+function diff() {
+    git branch -D diff
+    git checkout $1 &&
+        git checkout -b diff &&
+        git checkout $2 .
+}
+
+function pull() {
+    git checkout $@ &&
+        git pull &&
+        git checkout -
+}
+
+function random() {
+    echo $(($RANDOM % $@ + 1))
+}
+
+function random_issue() {
+    issues=$(gh issue list --json number)
+    issue_count=$(jq length <<<$issues)
+    n=$(($RANDOM % $issue_count))
+    chosen_issue=$(jq ".[$n].number" <<<$issues)
+    gh issue view $chosen_issue
+}
+
+function squash() {
+    git checkout main &&
+        git pull &&
+        git checkout - &&
+        git reset --soft main &&
+        git commit
+}

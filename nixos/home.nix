@@ -23,6 +23,10 @@
     zoxide
   ];
 
+  home.file.".bashrc" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/bash/bashrc";
+  };
+
   home.file.".config/git/config" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/git/config";
   };
