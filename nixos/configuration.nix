@@ -71,6 +71,8 @@
     after = [ "local-fs.target" ];
   };
 
+  environment.etc."keyd/default.conf".source = "${config.users.users.wlum.home}/config/keyd/default.conf";
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
