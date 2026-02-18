@@ -12,3 +12,5 @@
 	defaultbranch = main
 [push]
 	autoSetupRemote = true
+[core]
+	editor = nvim
