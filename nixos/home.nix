@@ -7,6 +7,7 @@
     azure-cli
     brave
     discord
+    fzf
     gcc
     gh
     git
